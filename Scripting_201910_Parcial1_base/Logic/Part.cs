@@ -18,11 +18,25 @@
         }
 
         public Part(float speedBonus)
-        {
+        {            
         }
 
         public void Upgrade()
         {
+            switch (Level)
+            {
+                case (0):                    
+                    break;
+                case (1):
+                    speedBonus = (speedBonus * 3) / 100;
+                    break;
+                case (2):
+                    speedBonus = (speedBonus * 3) / 100;
+                    break;
+                case (3):
+                    speedBonus = (speedBonus * 3) / 100;
+                    break;
+            }
         }
     }
 }
