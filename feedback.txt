@@ -1,14 +1,13 @@
-Parcial (2.5/ 5.0)
-	* En general, la lógica de equipamiento de partes no se satisface. La propuesta de usar as/is es interesante, pero la mezclaste con el VehicleType y no corregiste eso en el código.
-	* El SpeedBonus de las partes únicamente está definido por el Upgrade, por tanto no satisface que las partes configuran sus parámetros por constructor.
-	* El accesor MaxSpeed de Part siempre devuelve 0, sin importar qué parámetro se asigna en constructor o qué parte se equipe.
-	* Upgrade configura el maxSpeed según el Level. No es que esté mal, pero por encapsulamiento, si el accesor siempre retorna 0, no hay forma de ver que el Vehicle tenga los parámetros esperados. Por otro lado, nada parece cambiar Vehicle.Level de ninguna manera, por lo que siempre Level = 0.
-	* Part.Upgrade hace lo mismo, y está el mismo error.
-	* El accesor SpeedBonus de Part siempre devuelve 0. Aún cuando un método cambie el valor del atributo, si el accesor siempre retorna el mismo valor, no hay forma de ver que la instancia de PArt tenga los parámetros esperados.
-	* No se implementó Durability en las partes.
+Parcial (1.0 / 5.0)
+	* El código se entregó con errores de código.
+	* No se aplicó debidamente OOP. Se removieron miembros como Vehicle.Type, que debían ser usados por las clases derivadas, y hubo lógica común en Muffler, Turbo y Nitro que debía ser llevada a la clase base Part.
+	* Vehicle.Equip() retorna un boolean. En el caso propuesto, retorna un string.
+	* No se implementó Vehicle.Upgrade()
+	* Por qué Bike y Car tienen su baseMaxSpeed declarada como variable global? El enunciado pedía configurarlo por constructor.
+	* Los constructores de las clases de las partes "retornan" el SpeedBonus.
+	* Part.Type siempre retorna None en todas las subclases.
+
+Bonificación (0.0 / 0.5)
+	No se presentó propuesta para la bonificación.
 	
-
-Bonificación (0.0/ 0.5)
-	No se presentó propuesta para la bonificación
-
-Total: 2.5/ 5.0
+Total: 1.0 / 5.0
